@@ -1,0 +1,16 @@
+{
+  "name": "working-with-files",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start:sync": "yarn ts-node ./src/readWriteSync.ts",
+    "start:async": "yarn ts-node ./src/readWriteAsync.ts",
+    "start:promises": "yarn ts-node ./src/readWritePromises.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.35",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.7.2"
+  }
+}
