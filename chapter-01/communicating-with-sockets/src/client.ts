@@ -1,14 +1,18 @@
-import net from 'net'; // Intern module to using tcp protocol
+import net from 'net';
 
-const HOSTNAME = 'localhost';
+const stdin = process.stdin;
 const PORT = 3000;
+const HOSTNAME = 'localhost';
 
-
-net.createServer((socket) => {
-  console.log('Client connected!');
-
-  socket.on('data', (data) => {
-    console.log(data.toString('utf-8'))
-  })
+const socket = net.connect({
+  port: PORT,
+  host: HOSTNAME
 });
 
+socket.on('data', (data) => {
+  console.log('Message received by server: ', data.toString('utf-8') + "\n")
+});
+
+stdin.on('data', (data) => {
+  socket.write(data.toString('utf-8'));
+});
