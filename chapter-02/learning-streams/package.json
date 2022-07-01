@@ -1,0 +1,18 @@
+{
+  "name": "learning-streams",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "write": "yarn ts-node src/write-stream.ts",
+    "read": "yarn ts-node src/read-stream.ts",
+    "infinite:read": "yarn ts-node src/infinite-read.ts",
+    "for:await:read": "yarn ts-node src/for-await-read-stream.ts",
+    "async:generator": "yarn ts-node src/async-generator.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.4"
+  }
+}
