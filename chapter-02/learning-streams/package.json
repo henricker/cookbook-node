@@ -8,7 +8,8 @@
     "read": "yarn ts-node src/read-stream.ts",
     "infinite:read": "yarn ts-node src/infinite-read.ts",
     "for:await:read": "yarn ts-node src/for-await-read-stream.ts",
-    "async:generator": "yarn ts-node src/async-generator.ts"
+    "async:generator": "yarn ts-node src/async-generator.ts",
+    "paused:stream": " yarn ts-node src/paused-streams.ts"
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
